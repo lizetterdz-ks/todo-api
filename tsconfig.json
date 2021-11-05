@@ -20,7 +20,7 @@
     },
     "include": [
       "src/**/**.ts", 
-      "src/start.ts"    ],
+      "src/start.ts", "src/server.ts", "src/app.ts", "src/services/todos.service.ts", "src/services/index.ts", "src/routes/todos.routes.ts", "src/routes/index.ts", "src/models/Todo.ts", "src/infrastructure/WistonLogger.ts"    ],
     "exclude": ["node_modules"]
 }
   
