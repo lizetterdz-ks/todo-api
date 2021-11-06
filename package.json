@@ -4,9 +4,10 @@
   "author": "Lizette Rodriguez",
   "description": "Project to deploy and debug",
   "scripts": {
-    "start": "ts-node src/start.ts",
+    "start": "node ./dist/start.js",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run build",
+    "dev": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules -/src/start.ts"
   },
   "license": "ISC",
   "dependencies": {
@@ -19,6 +20,7 @@
     "http-status": "^1.5.0",
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0",
+    "typescript": "^4.4.4",
     "winston": "^3.3.3"
   },
   "devDependencies": {
@@ -29,7 +31,6 @@
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.11.4",
     "ts-node": "^10.4.0",
-    "ts-node-dev": "^1.1.8",
-    "typescript": "^4.4.4"
+    "ts-node-dev": "^1.1.8"
   }
 }
